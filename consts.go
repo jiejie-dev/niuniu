@@ -22,6 +22,22 @@ const (
 
 	CardsCount         = 52
 	PerPlayerCardCount = 5
+
+	Niu0      = 0
+	Niu1      = 1
+	Niu2      = 2
+	Niu3      = 3
+	Niu4      = 4
+	Niu5      = 5
+	Niu6      = 6
+	Niu7      = 7
+	Niu8      = 8
+	Niu9      = 9
+	NiuNiu    = 10
+	SilverNiu = 11
+	GoldNiu   = 12
+	Bomb      = 13
+	SmallNiu  = 14
 )
 
 var CardsData []CardInfo
@@ -47,6 +63,24 @@ var TransValue = map[int]string{
 	11: "J",
 	12: "Q",
 	13: "K",
+}
+
+var TransNiu = map[int]string{
+	0:  "没牛",
+	1:  "牛一",
+	2:  "牛二",
+	3:  "牛三",
+	4:  "牛四",
+	5:  "牛五",
+	6:  "牛六",
+	7:  "牛七",
+	8:  "牛八",
+	9:  "牛九",
+	10: "牛牛",
+	11: "银牛",
+	12: "金牛",
+	13: "炸弹",
+	14: "五小牛",
 }
 
 func Init52Cards() {
