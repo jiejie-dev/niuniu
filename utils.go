@@ -114,3 +114,20 @@ func SortCards(cards []CardInfo) []CardInfo {
 	}
 	return cards
 }
+
+func BankerIsWin(bankerCards, otherCards []CardInfo) bool {
+	bankerType := GetNiuType(bankerCards)
+	otherType := GetNiuType(bankerCards)
+	if bankerType != otherType {
+		return bankerType > otherType
+	}
+	switch bankerType {
+	case SmallNiu:
+		return true
+	case Bomb:
+		return bankerCards[2].CardValue > otherCards[2].CardValue
+	case GoldNiu, SilverNiu, NiuNiu, NotNiu:
+		return CompareCards(bankerCards[4], otherCards[4])
+	}
+	return true
+}

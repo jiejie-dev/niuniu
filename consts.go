@@ -23,7 +23,7 @@ const (
 	CardsCount         = 52
 	PerPlayerCardCount = 5
 
-	Niu0      = 0
+	NotNiu      = 0
 	Niu1      = 1
 	Niu2      = 2
 	Niu3      = 3
