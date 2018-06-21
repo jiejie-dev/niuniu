@@ -39,7 +39,7 @@ func CompareCards(a, b CardInfo) bool {
 
 func IsSmallNiu(cards []CardInfo) bool {
 	sum := 0
-	for _, item := range (cards) {
+	for _, item := range cards {
 		sum += item.CardCount
 	}
 	if sum <= 10 {
@@ -67,7 +67,7 @@ func IsSilverNiu(cards []CardInfo) bool {
 
 func GetNiu(cards []CardInfo) int {
 	lave := 0
-	for i := 1; i < len(cards); i++ {
+	for i := 0; i < len(cards); i++ {
 		lave = lave + cards[i].CardValue
 	}
 	lave = lave % 10
@@ -85,7 +85,7 @@ func GetNiu(cards []CardInfo) int {
 }
 
 func GetNiuType(cards []CardInfo) int {
-	// TODO: sort cards
+	cards = SortCards(cards)
 	if IsSmallNiu(cards) {
 		return SmallNiu
 	}
