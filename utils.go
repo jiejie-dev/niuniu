@@ -28,7 +28,7 @@ func Trans(color, value int) string {
 }
 
 func CompareCards(a, b CardInfo) bool {
-	if a.CardValue < b.CardValue {
+	if a.CardValue > b.CardValue {
 		return true
 	}
 	if a.CardValue < b.CardValue {
@@ -106,7 +106,7 @@ func SortCards(cards []CardInfo) []CardInfo {
 	for i := 0; i < length; i++ {
 		for j := i + 1; j < length; j++ {
 			temp := cards[i]
-			if cards[i].CardCount < cards[j].CardCount {
+			if cards[i].CardCount > cards[j].CardCount {
 				cards[i] = cards[j]
 				cards[j] = temp
 			}
